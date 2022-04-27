@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Parse Issue
-        uses: MichaelKohler/parse@fixes
+        uses: content-queue/parse@main
         id: parse
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Tweet
-        uses: MichaelKohler/tweet@fixes
+        uses: content-queue/tweet@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cardContent: ${{ steps.parse.outputs.cardContent }}
@@ -25,8 +25,3 @@ jobs:
           twitterConsumerSecret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
           twitterAccessTokenKey: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
           twitterAccessTokenSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-      - name: Discard closed issues from board
-        uses: content-queue/discard@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          project: Tweets
