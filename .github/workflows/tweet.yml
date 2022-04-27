@@ -4,6 +4,9 @@ on:
   project_card:
     types: [moved]
 
+permissions:
+  issues: write
+
 jobs:
   tweet:
     runs-on: ubuntu-latest
