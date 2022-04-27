@@ -21,6 +21,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cardContent: ${{ steps.parse.outputs.cardContent }}
+          doneColumn: Tweeted
           twitterApiKey: ${{ secrets.TWITTER_CONSUMER_KEY }}
           twitterApiSecret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
           twitterAccessToken: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
