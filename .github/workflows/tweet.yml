@@ -13,6 +13,7 @@ jobs:
         id: parse
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          dateFormat: "YMDHm"
       - name: Tweet
         uses: content-queue/tweet@main
         with:
