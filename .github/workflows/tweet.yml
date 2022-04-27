@@ -26,6 +26,7 @@ jobs:
           twitterAccessTokenKey: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
           twitterAccessTokenSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
       - name: Discard closed issues from board
+        uses: content-queue/discard@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           project: Tweets
