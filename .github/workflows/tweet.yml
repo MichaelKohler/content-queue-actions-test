@@ -17,11 +17,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Tweet
-        uses: content-queue/tweet@main
+        uses: MichaelKohler/tweet@feature/move-after-tweet
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cardContent: ${{ steps.parse.outputs.cardContent }}
-          twitterConsumerKey: ${{ secrets.TWITTER_CONSUMER_KEY }}
-          twitterConsumerSecret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-          twitterAccessTokenKey: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
-          twitterAccessTokenSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          twitterApiKey: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          twitterApiSecret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          twitterAccessToken: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+          twitterAccessSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
