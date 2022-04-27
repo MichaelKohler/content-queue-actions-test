@@ -11,7 +11,8 @@ jobs:
   add:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.0.3
+      - uses: alex-page/github-project-automation-plus@v0.8.1
         with:
-          project-url: https://github.com/MichaelKohler/content-queue-actions-test/projects/1
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          project: Tweets
+          column: Backlog
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
