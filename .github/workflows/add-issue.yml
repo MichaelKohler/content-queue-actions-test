@@ -5,6 +5,7 @@ on:
     types: [opened]
 
 permissions:
+  issues: write
   repository-projects: write
 
 jobs:
@@ -16,3 +17,4 @@ jobs:
           project: Tweets
           column: Backlog
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          action: add
