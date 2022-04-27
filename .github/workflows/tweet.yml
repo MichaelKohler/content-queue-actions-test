@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Parse Issue
-        uses: content-queue/parse@latest
+        uses: content-queue/parse@main
         id: parse
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Tweet
-        uses: content-queue/tweet@latest
+        uses: content-queue/tweet@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cardContent: ${{ steps.parse.outputs.cardContent }}
