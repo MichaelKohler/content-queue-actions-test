@@ -4,18 +4,6 @@ on:
   issues:
     types: [opened]
 
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  issues: write
-  packages: write
-  pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
-
 jobs:
   add:
     runs-on: ubuntu-latest
@@ -24,5 +12,5 @@ jobs:
         with:
           project: Tweets
           column: Backlog
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GHPROJECT_TOKEN }}
           action: add
