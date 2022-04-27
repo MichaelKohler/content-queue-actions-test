@@ -1,0 +1,19 @@
+name: Add Issue to Board
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.0.3
+        with:
+          project-url: https://github.com/orgs/MichaelKohler/projects/1
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labeled: bug, needs-triage
+          label-operator: OR
