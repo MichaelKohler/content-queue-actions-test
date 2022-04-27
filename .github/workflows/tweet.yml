@@ -6,6 +6,7 @@ on:
 
 permissions:
   issues: write
+  repository-projects: write
 
 jobs:
   tweet:
