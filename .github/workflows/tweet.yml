@@ -1,0 +1,25 @@
+name: Tweet
+
+on:
+  project_card:
+    types: [moved]
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hmarr/debug-action@v2
+      # - name: Parse Issue
+      #   uses: content-queue/parse@latest
+      #   id: parse
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Tweet
+      #   uses: content-queue/tweet@latest
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     cardContent: ${{ steps.parse.outputs.cardContent }}
+      #     twitterConsumerKey: ${{ secrets.TWITTER_CONSUMER_KEY }}
+      #     twitterConsumerSecret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+      #     twitterAccessTokenKey: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+      #     twitterAccessTokenSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
