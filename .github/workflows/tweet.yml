@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Tweet
-        uses: MichaelKohler/tweet@feature/move-after-tweet
+        uses: content-queue/tweet@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cardContent: ${{ steps.parse.outputs.cardContent }}
