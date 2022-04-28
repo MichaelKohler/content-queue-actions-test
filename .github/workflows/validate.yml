@@ -16,6 +16,7 @@ jobs:
         id: parse
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          failOnValidationError: false
       - name: Report validation errors if needed
         uses: MichaelKohler/report-validation@feature/validation
         with:
