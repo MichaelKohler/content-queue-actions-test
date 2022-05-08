@@ -17,6 +17,11 @@ jobs:
         id: parse
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate Tweet
+        uses: MichaelKohler/validate-tweet@feature/validation
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          cardContent: ${{ steps.parse.outputs.cardContent }}
       - name: Tweet
         uses: MichaelKohler/tweet@feature/validation
         with:
