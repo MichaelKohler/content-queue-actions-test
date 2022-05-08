@@ -20,7 +20,6 @@ jobs:
         uses: MichaelKohler/validate-tweet@feature/validation
         id: validate
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           cardContent: ${{ steps.parse.outputs.cardContent }}
           failOnValidationError: false
       - name: Report validation errors if needed
